@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box,Fab, Button, Container, Typography } from "@mui/material";
+
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,14 +25,18 @@ export default function RootLayout({ children }) {
           {/* Header */}
           <Box component="header" p={2} bgcolor="primary.main" color="white">
             <Container maxWidth="lg">
-              <Box display="flex" justifyContent="space-between">
+              <Box display="flex" justifyContent="space-between" alignItems="center">
                 <Typography variant="h5">Netflix Support AI</Typography>
                 <Box>
                   <Link href="/" passHref>
-                    <Button color="inherit">Home</Button>
+                    <Fab variant="extended" color="inherit" sx={{ mx: 1, color:"black"}}>
+                      Home
+                    </Fab>
                   </Link>
                   <Link href="/chatbot" passHref>
-                    <Button color="inherit">Chatbot</Button>
+                    <Fab variant="extended" color="inherit" sx={{ mx: 1, color:"black" }}>
+                      Chat
+                    </Fab>
                   </Link>
                 </Box>
               </Box>
@@ -60,7 +66,7 @@ export default function RootLayout({ children }) {
                   <Button color="inherit">Home</Button>
                 </Link>
                 <Link href="/chatbot" passHref>
-                  <Button color="inherit">Chatbot</Button>
+                  <Button color="inherit">Support</Button>
                 </Link>
               </Box>
             </Container>
