@@ -1,6 +1,6 @@
-import { Box, Paper, Fab, Button, Typography } from '@mui/material'
+import { Box, Paper, Fab, Typography } from '@mui/material'
 import Link from 'next/link'
-
+import Image from 'next/image' // Import Image component for handling images in Next.js
 
 export default function HomePage() {
   return (
@@ -11,41 +11,52 @@ export default function HomePage() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      p={3} // Add padding to the main container
+      p={3}
+      sx={{ backgroundColor: 'black', position: 'relative' }} // Set the background color to black and position to relative
     >
-      <Typography variant="h2" gutterBottom>
-        Welcome to the Netflix Support AI
+      
+      <Typography variant="h2" gutterBottom sx={{ color: 'red', fontWeight: 'bold' }}>
+        Netflix Support AI
       </Typography>
       
       <Box mb={6} mt={10} display="flex" justifyContent="center">
         <Link href="/chatbot" passHref>
-          <Fab variant="extended" color="primary">
-            
+          <Fab
+            variant="extended"
+            sx={{
+              backgroundColor: 'red',
+              color: 'white',
+              transition: 'box-shadow 0.3s ease-in-out',
+              '&:hover': {
+                backgroundColor: 'red',
+                boxShadow: '0px 4px 20px rgba(255, 0, 0, 0.5)',
+              },
+            }}
+          >
             Get Started
           </Fab>
         </Link>
       </Box>
 
       <Box
-        mt={5} // Add top margin to space out from the button
+        mt={5}
         display="flex"
         justifyContent="space-between"
         whiteSpace={4}
         width="100%"
         maxWidth="md"
       >
-        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1 }}>
-          <Typography variant="h6" gutterBottom>
+        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1, backgroundColor: '#333', color: 'white' }}>
+          <Typography variant="h6" gutterBottom sx={{ color: 'red', fontWeight: 'bold' }}>
             Trouble Shooting
           </Typography>
           <Typography variant="body2">
             Having trouble with Netflix? Our AI can help diagnose and resolve common issues with your account or streaming experience. 
-            
           </Typography>
         </Paper>
         
-        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1 }}>
-          <Typography variant="h6" gutterBottom>
+        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1, backgroundColor: '#333', color: 'white' }}>
+          <Typography variant="h6" gutterBottom sx={{ color: 'red', fontWeight: 'bold' }}>
             Movie Suggestions
           </Typography>
           <Typography variant="body2">
@@ -53,8 +64,8 @@ export default function HomePage() {
           </Typography>
         </Paper>
         
-        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1 }}>
-          <Typography variant="h6" gutterBottom>
+        <Paper elevation={6} sx={{ p: 3, flex: 1, mx: 1, backgroundColor: '#333', color: 'white' }}>
+          <Typography variant="h6" gutterBottom sx={{ color: 'red', fontWeight: 'bold' }}>
             Resources
           </Typography>
           <Typography variant="body2">
@@ -65,3 +76,4 @@ export default function HomePage() {
     </Box>
   )
 }
+
