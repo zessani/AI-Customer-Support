@@ -96,8 +96,8 @@ export default function Home() {
     >
       <Stack
         direction={'column'}
-        width="500px"
-        height="700px"
+        width="800px"
+        height="500px"
         border="1px solid black"
         p={2}
         spacing={3}
