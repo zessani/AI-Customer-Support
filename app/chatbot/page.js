@@ -134,7 +134,7 @@ export default function Chatbot() {
 
         <Stack
           direction={'column'}
-          width="600px"
+          width="800px"
           height="500px"
           border="1px solid #333" // Darker border for better contrast
           bgcolor="#000" // Slightly lighter dark background

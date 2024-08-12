@@ -1,11 +1,13 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Box,Fab, Button, Container, Typography } from "@mui/material";
+import { Bebas_Neue } from "next/font/google";
 
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Netflix Support AI",
@@ -17,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Box
+          
           display="flex"
           flexDirection="column"
           minHeight="100vh"
@@ -26,17 +29,23 @@ export default function RootLayout({ children }) {
           <Box component="header" p={2} bgcolor="black" color="white">
             <Container maxWidth="lg">
               <Box display="flex" justifyContent="space-between" alignItems="center">
-                <Typography variant="h5" color={"#E50914"}>Netflix Support AI</Typography>
+                <Typography 
+                  variant="h5" 
+                  color={"#E50914"} 
+                  sx={{ fontFamily: bebasNeue.style.fontFamily }}
+                >
+                  Netflix Support AI
+                </Typography>
                 <Box>
                   <Link href="/" passHref>
-                    <Fab variant="extended" color="inherit" sx={{ mx: 1, color:"black"}}>
+                    <Button variant="outlined" color="inherit" sx={{ mx: 1, color: "#E50914" }}>
                       Home
-                    </Fab>
+                    </Button>
                   </Link>
                   <Link href="/chatbot" passHref>
-                    <Fab variant="extended" color="inherit" sx={{ mx: 1, color:"black" }}>
+                    <Button variant="outlined" color="inherit" sx={{ mx: 1, color: "#E50914" }}>
                       Chat
-                    </Fab>
+                    </Button>
                   </Link>
                 </Box>
               </Box>
