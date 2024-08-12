@@ -197,7 +197,7 @@ export default function Chatbot() {
               onClick={sendMessage}
               disabled={isLoading}
               sx={{
-                bgcolor: '#e50914',
+                bgcolor: '#E50914',
                 color: 'white',
                 '&:hover': {
                   bgcolor: '#b81d24', // Darker red on hover

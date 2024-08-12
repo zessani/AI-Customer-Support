@@ -23,10 +23,10 @@ export default function RootLayout({ children }) {
           justifyContent="space-between"
         >
           {/* Header */}
-          <Box component="header" p={2} bgcolor="primary.main" color="white">
+          <Box component="header" p={2} bgcolor="black" color="white">
             <Container maxWidth="lg">
               <Box display="flex" justifyContent="space-between" alignItems="center">
-                <Typography variant="h5">Netflix Support AI</Typography>
+                <Typography variant="h5" color={"#E50914"}>Netflix Support AI</Typography>
                 <Box>
                   <Link href="/" passHref>
                     <Fab variant="extended" color="inherit" sx={{ mx: 1, color:"black"}}>
@@ -51,8 +51,9 @@ export default function RootLayout({ children }) {
           {/* Footer */}
           <Box
             component="footer"
-            p={2}
-            bgcolor="primary.main"
+            p={5}
+          
+            bgcolor="black"
             color="white"
             textAlign="center"
           >
@@ -61,14 +62,7 @@ export default function RootLayout({ children }) {
                 © {new Date().getFullYear()} Netflix Support AI. All rights
                 reserved.
               </Typography>
-              <Box mt={1}>
-                <Link href="/" passHref>
-                  <Button color="inherit">Home</Button>
-                </Link>
-                <Link href="/chatbot" passHref>
-                  <Button color="inherit">Support</Button>
-                </Link>
-              </Box>
+              
             </Container>
           </Box>
         </Box>
