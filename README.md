@@ -1,5 +1,7 @@
 ## Welcome to Netflix Support AI
 
+Netflix Support AI is a tool I made as part of the Headstarter AI Fellowship to provide instant support for Netflix-related queries, including troubleshooting and movie suggestions.
+
 **Tech Stack:** NextJS, React, MaterialUI, OpenAI
 
 **Features:**
